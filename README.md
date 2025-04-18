@@ -39,7 +39,12 @@ Enter target IP address or domain: 192.168.1.155
 Enter starting port: 20
 Enter ending port: 100
 
-![Port Scanner Output](output_screenshot.PNG.jpeg)
+
+
+## Screenshot of Port Scanner Output
+
+![Port Scanner Output](port_scanner_output.jpeg)
+
 
 
 
