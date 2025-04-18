@@ -43,7 +43,7 @@ Enter ending port: 100
 
 ## Screenshot of Port Scanner Output
 
-![Port Scanner Output](port_scanner_output.jpeg)
+<img src="port_scanner_output.jpeg">
 
 
 
