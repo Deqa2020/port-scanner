@@ -41,9 +41,11 @@ Enter ending port: 100
 
 
 
-## Screenshot of Port Scanner Output
 
-<img src="port_scanner_output.jpeg">
+
+
+
+
 
 
 
