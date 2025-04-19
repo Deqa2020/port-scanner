@@ -46,7 +46,9 @@ Enter ending port: 100
 
 Here's how it looks when running in the terminal:
 
-![Port Scanner Screenshot](https://raw.githubusercontent.com/Deqa2020/port-scanner/main/screenshot.png)
+
+<img src="screenshot.png">
+
 
 
 
