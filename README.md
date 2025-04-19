@@ -79,7 +79,7 @@ This tool is intended for educational purposes only. Do not use it to scan netwo
 
 
 
-![Welcome](screenshots.png)
+
 
 
 
