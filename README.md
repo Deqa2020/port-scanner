@@ -86,10 +86,6 @@ For example: I used this tool to scan my HP laptop on my home network.
 
 🔐 Unauthorized scanning can be illegal and may violate terms of service. Use responsibly.
 
-## 📸 Port Scanning Demo
-
-This screenshot shows the script in action:
-
 
 
 
