@@ -40,9 +40,13 @@ Enter target IP address or domain: 192.168.1.155
 Enter starting port: 20
 Enter ending port: 100
 
-🖼️ Screenshot
 
-Here's how it looks when running:
+
+## 🖼️ Screenshot
+
+Here's how it looks when running in the terminal:
+
+![Port Scanner Screenshot](https://raw.githubusercontent.com/Deqa2020/port-scanner/main/screenshot.png)
 
 
 
