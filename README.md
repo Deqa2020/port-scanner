@@ -89,6 +89,11 @@ For example: I used this tool to scan my HP laptop on my home network.
 
 
 
+## 📸 Port Scanning Demo
+
+Here's what the port scanner looks like in action:
+
+![Port Scanning](images/portscanning.png)
 
 
 
