@@ -72,14 +72,19 @@ Ports always closed         | Check if the firewall is blocking connections or p
 
 
 ⚠️ Disclaimer
+This tool is intended for educational purposes only. Do not use it to scan networks or devices that you do not own or do not have permission to scan.
 
-This tool is intended for educational purposes only. Do not use it to scan networks or devices you do not own or have permission to scan.
+✅ Always scan your own computer or network.
 
+💡 To find your IP address on Windows, open Command Prompt and type:
 
+ipconfig
 
+Use the IP shown under IPv4 Address to scan your own machine.
 
+For example: I used this tool to scan my HP laptop on my home network.
 
-
+🔐 Unauthorized scanning can be illegal and may violate terms of service. Use responsibly.
 
 
 
