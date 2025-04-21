@@ -1,91 +1,133 @@
-# 🔍 **Port Scanner**
+# 🔍 Port Scanner
 
-A simple and effective **Python-based Port Scanner** designed to identify open ports on a given IP address or domain. This tool is essential for **network reconnaissance** and **penetration testing** tasks, allowing users to scan a range of ports to detect open services.
-
----
-
-## 🧰 **Features**
-
-- **Scan Ports**: Scans a specified range of ports on a target machine or domain.
-- **Real-Time Results**: Displays which ports are open in real-time during the scan.
-- **Socket Library**: Built using Python's built-in `socket` library, no external dependencies required.
-- **Lightweight and Easy to Use**: Simple design and easy setup for anyone to use.
-- **Track Duration**: Shows the time taken to complete the port scan.
+A simple and effective Python-based port scanner designed to identify open ports on a given IP address or domain. This tool is essential for network reconnaissance and penetration testing tasks, allowing users to scan a range of ports to detect open services.
 
 ---
 
-## 📦 **Requirements**
+## 🧰 Features
 
-- **Python 3.x** installed on your system (you can download it [here](https://www.python.org/downloads/)).
-- No other dependencies are required, as the script uses Python's built-in `socket` library.
+- 🔎 **Scan Ports**: Scan a specified range of ports on any IP or domain.
+- ⚡ **Real-Time Results**: Displays open ports as they’re found.
+- 🛠️ **Built-in Libraries**: Uses Python’s `socket` library — no external dependencies.
+- 🪶 **Lightweight**: Simple design for fast usage.
+- ⏱️ **Time Tracking**: Displays how long the scan takes.
 
 ---
 
-## ⚙️ **Installation**
+## 📦 Requirements
 
-Clone the repository to your local machine using Git:
+- ✅ **Python 3.x** — [Download here](https://www.python.org/downloads/)
+- ✅ **Visual Studio Code (VS Code)** — [Download here](https://code.visualstudio.com/Download)
+- ✅ **Python Extension for VS Code** (by Microsoft)
+- 🚫 No additional libraries needed
 
-```bash
-git clone https://github.com/Deqa2020/port-scanner.git
-cd port-scanner
-
-
-▶️ How to Run
-
-Run the script using Python:
-
-python port_scanner.py
+---
 
 
-You will be prompted to enter:
+> 📌 **The simple Python script is located at the bottom of this README.**
 
-Enter target IP address or domain: 192.168.1.155
-Enter starting port: 20
-Enter ending port: 100
-
-
-🧪 Example Usage
-
-Here’s what it looks like when running the script:
-
-Enter target IP address or domain: 192.168.1.155
-Enter starting port: 20
-Enter ending port: 100
-Starting scan on 192.168.1.155
-Scanning ports 20 to 100...
-
-[+] Port 22 is open
-[+] Port 80 is open
-
-Scan completed in: 0:00:01.234567
+> Copy that code into your **Visual Studio Code (VS Code)** editor and follow the instructions below to run it.
 
 
 
-🛠️ Troubleshooting
+## ▶️ How to Run in Visual Studio Code (VS Code)
 
+1. **Install Visual Studio Code**  
+   Download and install Visual Studio Code from [here](https://code.visualstudio.com/Download).
 
-Issue                       | Solution
-No output                   | No services running on those ports; try another target or port range.
-Python not found            | Install Python or check PATH variable.
-Ports always closed         | Check if the firewall is blocking connections or ports are just closed.
+2. **Install Python Extension in VS Code**  
+   - Open VS Code  
+   - Press `Ctrl + Shift + X`  
+   - Search for `Python` and install the one by Microsoft
 
+3. **Create the Script File**  
+   - Open a new file in VS Code  
+   - Copy the Python code from the bottom of this README  
+   - Save the file as `port_scanner.py`
 
+4. **Open the Terminal**  
+   - Click on `Terminal → New Terminal`  
+   - Or press `` Ctrl + ` `` (backtick)
+
+5. **Navigate to the Script Directory**:
+   ```bash
+   cd path/to/your/script
+
+  6 Run the Script:
+  
+      python port_scanner.py
+7 Enter the Target Information:
+
+    Enter target IP address or domain: 192.168.1.155
+    Enter starting port: 20
+    Enter ending port: 100
+
+8 View the Results
+
+The script will show which ports are open and how long the scan took.
+
+🧪 Example Output
+
+    Enter target IP address or domain: 192.168.1.155
+    Enter starting port: 20
+    Enter ending port: 100
+    Starting scan on 192.168.1.155
+    Scanning ports 20 to 100...
+
+    [+] Port 22 is open
+    [+] Port 80 is open
+
+    Scan completed in: 0:00:01.234567
+    
 
 ⚠️ Disclaimer
-This tool is intended for educational purposes only. Do not use it to scan networks or devices that you do not own or do not have permission to scan.
+
+This tool is intended for educational purposes only. 
+
+
+Do not scan devices or networks you do not own or have explicit permission to test.
 
 ✅ Always scan your own computer or network.
 
-💡 To find your IP address on Windows, open Command Prompt and type:
+💡 To find your own IP address on Windows, open Command Prompt and run:
 
-ipconfig
-
-Use the IP shown under IPv4 Address to scan your own machine.
-
-For example: I used this tool to scan my HP laptop on my home network.
-
-🔐 Unauthorized scanning can be illegal and may violate terms of service. Use responsibly.
+        ipconfig
 
 
+## 📝 Port Scanner Python Code
 
+```python
+# ---------------------------------------- 
+# Port Scanner Script
+# Author: Deqa Mohamed
+# GitHub: https://github.com/Deqa2020
+# LinkedIn: https://www.linkedin.com/in/deqa-mohamed-13149a23b/
+# Description: Simple Python script to scan open ports on a host
+# ----------------------------------------
+
+import socket
+from datetime import datetime
+
+# Get user input
+target = input("Enter target IP address or domain: ")
+start_port = int(input("Enter starting port: "))
+end_port = int(input("Enter ending port: "))
+
+print(f"\nStarting scan on {target}")
+print(f"Scanning ports {start_port} to {end_port}...\n")
+start_time = datetime.now()
+
+# Scan ports in the given range
+for port in range(start_port, end_port + 1):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    socket.setdefaulttimeout(1)  # Timeout after 1 second
+    result = s.connect_ex((target, port))
+    if result == 0:
+        print(f"[+] Port {port} is open")
+    s.close()
+
+end_time = datetime.now()
+total_time = end_time - start_time
+print(f"\nScan completed in: {total_time}")
+  
 
