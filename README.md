@@ -87,11 +87,5 @@ For example: I used this tool to scan my HP laptop on my home network.
 🔐 Unauthorized scanning can be illegal and may violate terms of service. Use responsibly.
 
 
-## 🖼️ Screenshot
-
-Here’s a screenshot of the port scanner in action:
-
-![Port Scanner Screenshot](images/portscanning.png)
-
 
 
