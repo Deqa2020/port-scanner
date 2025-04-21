@@ -93,6 +93,17 @@ Do not scan devices or networks you do not own or have explicit permission to te
 
         ipconfig
 
+## 🛠️ Troubleshooting
+
+| **Issue**             | **Solution**                                                        |
+|-----------------------|---------------------------------------------------------------------|
+| **No output**         | No services are running on those ports — try a different target or range. |
+| **Python not found**  | Install Python or check your system's PATH variable.                |
+| **Ports always closed**| Check if firewall or antivirus is blocking connections.            |
+
+
+
+
 
 ## 📝 Port Scanner Python Code
 
@@ -100,8 +111,6 @@ Do not scan devices or networks you do not own or have explicit permission to te
 # ---------------------------------------- 
 # Port Scanner Script
 # Author: Deqa Mohamed
-# GitHub: https://github.com/Deqa2020
-# LinkedIn: https://www.linkedin.com/in/deqa-mohamed-13149a23b/
 # Description: Simple Python script to scan open ports on a host
 # ----------------------------------------
 
