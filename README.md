@@ -6,23 +6,23 @@ A lightweight TCP port scanning tool used to identify open ports and exposed ser
 
 ## 🎯 Security Purpose
 
-Open ports represent potential entry points for attackers. This tool helps security analysts and students identify:
+Open ports represent potential entry points for attackers. This tool helps security analysts identify:
 
-- Exposed network services
-- Unnecessary open ports
-- Potential attack surface risks
-- Misconfigured systems
+- Exposed network services  
+- Unnecessary open ports  
+- Potential attack surface risks  
+- Misconfigured systems  
 
-This aligns with early-stage vulnerability assessment and SOC analysis workflows.
+This aligns with early-stage vulnerability assessment and SOC workflows.
 
 ---
 
 ## ⚙️ Features
 
-- TCP port scanning across a defined range
-- Real-time detection of open ports
-- Lightweight implementation using Python standard libraries
-- Execution time tracking for performance analysis
+- TCP port scanning across a defined range  
+- Real-time detection of open ports  
+- Lightweight implementation using Python standard libraries  
+- Execution time tracking for performance analysis  
 
 ---
 
@@ -38,42 +38,17 @@ Scanning ports 20 to 100...
 [+] Port 22 is open
 [+] Port 80 is open
 
-Scan completed in: 0:00:01.234567    
-
-
-
-
-
-> 📌 **The simple Python script is located at the bottom of this README.**
-
-> Copy that code into your **Visual Studio Code (VS Code)** editor and follow the instructions below to run it.
-
+Scan completed in: 0:00:01.234567
 
 
 ---
 
 ## 🔍 How It Works
 
-- Uses Python `socket` library to attempt TCP connections
-- Iterates through a user-defined port range
-- If connection succeeds → port is OPEN
-- If connection fails → port is CLOSED/FILTERED
-
----
-
-## 📊 Security Relevance (IMPORTANT)
-
-This tool demonstrates key cybersecurity concepts:
-
-- Vulnerability identification
-- Attack surface mapping
-- Network exposure analysis
-- Early-stage reconnaissance techniques
-
-Used in security operations to support:
-- Vulnerability assessments
-- Risk identification
-- Infrastructure security review
+- Uses Python `socket` library to attempt TCP connections  
+- Iterates through a user-defined port range  
+- If connection succeeds → port is OPEN  
+- If connection fails → port is CLOSED/FILTERED  
 
 ---
 
@@ -81,15 +56,15 @@ Used in security operations to support:
 
 This tool is intended for educational and authorized security testing only.
 
-Scanning systems without permission is illegal and unethical.
+Unauthorized scanning of systems or networks is illegal and unethical.
 
 ---
 
 ## 🛠️ Technical Stack
 
-- Python 3.x
-- socket (standard library)
-- datetime module
+- Python 3.x  
+- socket (standard library)  
+- datetime module  
 
 ---
 
@@ -97,5 +72,3 @@ Scanning systems without permission is illegal and unethical.
 
 Deqa Mohamed  
 Cybersecurity Student | SOC & Vulnerability Analyst Track
-    
-
