@@ -1,27 +1,47 @@
-# 🔍 Port Scanner
+# 🔍 Port Scanner (Python)
 
-A simple and effective Python-based port scanner designed to identify open ports on a given IP address or domain. This tool is essential for network reconnaissance and penetration testing tasks, allowing users to scan a range of ports to detect open services.
-
----
-
-## 🧰 Features
-
-- 🔎 **Scan Ports**: Scan a specified range of ports on any IP or domain.
-- ⚡ **Real-Time Results**: Displays open ports as they’re found.
-- 🛠️ **Built-in Libraries**: Uses Python’s `socket` library — no external dependencies.
-- 🪶 **Lightweight**: Simple design for fast usage.
-- ⏱️ **Time Tracking**: Displays how long the scan takes.
+A lightweight TCP port scanning tool used to identify open ports and exposed services on a target system. This project demonstrates foundational concepts in vulnerability assessment, network reconnaissance, and attack surface identification.
 
 ---
 
-## 📦 Requirements
+## 🎯 Security Purpose
 
-- ✅ **Python 3.x** — [Download here](https://www.python.org/downloads/)
-- ✅ **Visual Studio Code (VS Code)** — [Download here](https://code.visualstudio.com/Download)
-- ✅ **Python Extension for VS Code** (by Microsoft)
-- 🚫 No additional libraries needed
+Open ports represent potential entry points for attackers. This tool helps security analysts and students identify:
+
+- Exposed network services
+- Unnecessary open ports
+- Potential attack surface risks
+- Misconfigured systems
+
+This aligns with early-stage vulnerability assessment and SOC analysis workflows.
 
 ---
+
+## ⚙️ Features
+
+- TCP port scanning across a defined range
+- Real-time detection of open ports
+- Lightweight implementation using Python standard libraries
+- Execution time tracking for performance analysis
+
+---
+
+## 🧪 Example Output
+
+Enter target IP address or domain: 192.168.1.155
+Enter starting port: 20
+Enter ending port: 100
+
+Starting scan on 192.168.1.155
+Scanning ports 20 to 100...
+
+[+] Port 22 is open
+[+] Port 80 is open
+
+Scan completed in: 0:00:01.234567    
+
+
+
 
 
 > 📌 **The simple Python script is located at the bottom of this README.**
@@ -30,54 +50,53 @@ A simple and effective Python-based port scanner designed to identify open ports
 
 
 
-## ▶️ How to Run in Visual Studio Code (VS Code)
+---
 
-1. **Install Visual Studio Code**  
-   Download and install Visual Studio Code from [here](https://code.visualstudio.com/Download).
+## 🔍 How It Works
 
-2. **Install Python Extension in VS Code**  
-   - Open VS Code  
-   - Press `Ctrl + Shift + X`  
-   - Search for `Python` and install the one by Microsoft
+- Uses Python `socket` library to attempt TCP connections
+- Iterates through a user-defined port range
+- If connection succeeds → port is OPEN
+- If connection fails → port is CLOSED/FILTERED
 
-3. **Create the Script File**  
-   - Open a new file in VS Code  
-   - Copy the Python code from the bottom of this README  
-   - Save the file as `port_scanner.py`
+---
 
-4. **Open the Terminal**  
-   - Click on `Terminal → New Terminal`  
-   - Or press `` Ctrl + ` `` (backtick)
+## 📊 Security Relevance (IMPORTANT)
 
-5. **Navigate to the Script Directory**:
-   ```bash
-   cd path/to/your/script
+This tool demonstrates key cybersecurity concepts:
 
-  6 Run the Script:
-  
-      python port_scanner.py
-7 Enter the Target Information:
+- Vulnerability identification
+- Attack surface mapping
+- Network exposure analysis
+- Early-stage reconnaissance techniques
 
-    Enter target IP address or domain: 192.168.1.155
-    Enter starting port: 20
-    Enter ending port: 100
+Used in security operations to support:
+- Vulnerability assessments
+- Risk identification
+- Infrastructure security review
 
-8 View the Results
+---
 
-The script will show which ports are open and how long the scan took.
+## ⚠️ Legal Disclaimer
 
-🧪 Example Output
+This tool is intended for educational and authorized security testing only.
 
-    Enter target IP address or domain: 192.168.1.155
-    Enter starting port: 20
-    Enter ending port: 100
-    Starting scan on 192.168.1.155
-    Scanning ports 20 to 100...
+Scanning systems without permission is illegal and unethical.
 
-    [+] Port 22 is open
-    [+] Port 80 is open
+---
 
-    Scan completed in: 0:00:01.234567
+## 🛠️ Technical Stack
+
+- Python 3.x
+- socket (standard library)
+- datetime module
+
+---
+
+## 👨‍💻 Author
+
+Deqa Mohamed  
+Cybersecurity Student | SOC & Vulnerability Analyst Track
     
 
 ⚠️ Disclaimer
