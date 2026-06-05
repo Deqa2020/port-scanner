@@ -26,7 +26,7 @@ This aligns with early-stage vulnerability assessment and SOC workflows.
 
 ---
 
-## 🧪 Example Output
+## 🧪 Output
 
 Enter target IP address or domain: 192.168.1.155
 Enter starting port: 20
@@ -35,11 +35,7 @@ Enter ending port: 100
 Starting scan on 192.168.1.155
 Scanning ports 20 to 100...
 
-[+] Port 22 is open
-[+] Port 80 is open
-
-Scan completed in: 0:00:01.234567
-
+Scan completed in: 0:01:41.616039
 
 ---
 
