@@ -1,4 +1,3 @@
-
 # ----------------------------------------
 # Port Scanner Script
 # Author: Deqa Mohamed
@@ -10,24 +9,37 @@
 import socket
 from datetime import datetime
 
+# Set timeout ONCE (important fix)
+socket.setdefaulttimeout(1)
+
 # Get user input
 target = input("Enter target IP address or domain: ")
 start_port = int(input("Enter starting port: "))
 end_port = int(input("Enter ending port: "))
 
-print(f"\nStarting scan on {target}")
-print(f"Scanning ports {start_port} to {end_port}...\n")
+# Header output (Nmap-style)
+print(f"\nScanning target: {target}")
+print(f"Ports: {start_port}-{end_port}")
+print("-" * 40)
+print(f"{'PORT':<10}{'STATE'}")
+print("-" * 40)
+
 start_time = datetime.now()
 
-# Scan ports in the given range
+# Scan ports
 for port in range(start_port, end_port + 1):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    socket.setdefaulttimeout(1)  # Timeout after 1 second
+
     result = s.connect_ex((target, port))
+
     if result == 0:
-        print(f"[+] Port {port} is open")
+        print(f"{port}/tcp{'':<5}open")
+
     s.close()
 
 end_time = datetime.now()
 total_time = end_time - start_time
-print(f"\nScan completed in: {total_time}")
+
+# Footer output
+print("-" * 40)
+print(f"Scan completed in: {total_time}")
